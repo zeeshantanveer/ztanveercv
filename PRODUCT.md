@@ -37,6 +37,7 @@ Read alongside the CV during screening. The job ad stresses: standards-compliant
 
 - Name: Zeeshan Tanveer. Portrait: `4182d1ef-129e-41c8-a145-03324dbda418.png` (repo root).
 - User explicitly rejects: dark neon "developer" cliche, template or AI-generated look, gimmicks that make projects or facts hard to read. User asked for an interactive, 3D, motion-rich experience.
+- Standing preference (2026-11-22): after seeing a metro-map concept, the user chose the category standard, a modern developer portfolio executed at full craft, and named Stripe and Linear/Vercel as the quality bar. Concept metaphors (maps, kites, desktops) are not wanted for this portfolio.
 
 ## Evidence on Hand
 

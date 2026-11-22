@@ -1,325 +1,320 @@
 ---
 name: Zeeshan Tanveer Portfolio
-description: A full-stack portfolio drawn as a working transit network; the visitor rides the stack stop by stop.
+description: A developer portfolio built to the product-site standard; the product is the shipped systems.
 colors:
-  enamel-ground: "#eef1ee"
-  enamel-white: "#fbfcfb"
-  plate-navy: "#14253f"
-  plate-navy-raised: "#22385c"
-  timetable-ink: "#3e4f68"
-  platform-rule: "#d3d9de"
-  platform-tint: "#e6eaee"
-  trunk-orange: "#f26b21"
-  trunk-orange-ink: "#b4470c"
-  on-orange: "#1a0d04"
+  canvas-white: "#ffffff"
+  cool-grey: "#f6f8fb"
+  ink-navy: "#0b1b33"
+  ink-navy-hover: "#1a2d4f"
+  body-slate: "#42526b"
+  muted-slate: "#5b687d"
+  hairline: "#e3e8ef"
+  hairline-strong: "#d3dae4"
+  accent-violet: "#5a48f5"
+  accent-violet-ink: "#3f2fd6"
+  field-peach: "#ffb37a"
+  field-coral: "#ff5c87"
+  field-violet: "#8f6bff"
+  field-teal: "#40cce0"
+  data-violet: "#7c5cff"
+  data-teal: "#12b5c9"
+  bar-before: "#b7c1d0"
+  bar-track: "#e6eaf1"
   shopify-green: "#2e9e4f"
-  woocommerce-purple: "#7a3e9d"
-  magento-red: "#d6332b"
-  wordpress-blue: "#1e5aa8"
-  realtime-teal: "#0a8f96"
-  spur-grey: "#8d96a0"
-  ravi-blue: "#cfe2ec"
-  ravi-ink: "#5f8aa0"
+  woo-purple: "#7f54b3"
+  magento-orange: "#e2552d"
 typography:
   display:
-    fontFamily: "Overpass, system-ui, sans-serif"
-    fontSize: "clamp(38px, 5.4vw, 70px)"
-    fontWeight: 800
-    lineHeight: 0.98
+    fontFamily: "Geist, system-ui, sans-serif"
+    fontSize: "clamp(38px, 4.6vw, 62px)"
+    fontWeight: 650
+    lineHeight: 1.08
     letterSpacing: "-0.03em"
   headline:
-    fontFamily: "Overpass, system-ui, sans-serif"
-    fontSize: "clamp(24px, 2.6vw, 32px)"
-    fontWeight: 800
-    lineHeight: 1.05
-    letterSpacing: "-0.015em"
+    fontFamily: "Geist, system-ui, sans-serif"
+    fontSize: "clamp(32px, 3.6vw, 48px)"
+    fontWeight: 650
+    lineHeight: 1.08
+    letterSpacing: "-0.03em"
   title:
-    fontFamily: "Overpass, system-ui, sans-serif"
+    fontFamily: "Geist, system-ui, sans-serif"
+    fontSize: "23px"
+    fontWeight: 650
+    lineHeight: 1.08
+    letterSpacing: "-0.02em"
+  lede:
+    fontFamily: "Geist, system-ui, sans-serif"
     fontSize: "19px"
-    fontWeight: 800
-    lineHeight: 1.2
+    fontWeight: 500
+    lineHeight: 1.55
   body:
-    fontFamily: "Overpass, system-ui, sans-serif"
+    fontFamily: "Geist, system-ui, sans-serif"
     fontSize: "17px"
     fontWeight: 400
-    lineHeight: 1.55
+    lineHeight: 1.6
   label:
-    fontFamily: "Overpass, system-ui, sans-serif"
-    fontSize: "13.5px"
-    fontWeight: 700
-    lineHeight: 1.1
+    fontFamily: "Geist, system-ui, sans-serif"
+    fontSize: "13px"
+    fontWeight: 500
+    lineHeight: 1.35
   figure:
-    fontFamily: "Overpass Mono, ui-monospace, monospace"
-    fontSize: "15px"
-    fontWeight: 600
-    fontFeature: "tnum"
-  urdu:
-    fontFamily: "Nastaliq Sign, serif"
+    fontFamily: "Geist Mono, ui-monospace, monospace"
     fontSize: "22px"
     fontWeight: 500
-    lineHeight: 1.9
+    letterSpacing: "-0.02em"
+    fontFeature: "tnum"
 rounded:
-  label: "4px"
-  sign: "6px"
+  sm: "8px"
+  md: "10px"
+  bubble: "14px"
+  inset: "16px"
+  panel: "18px"
+  tile: "20px"
+  feature: "22px"
   pill: "999px"
-  roundel: "50%"
 spacing:
-  chip-gap: "6px"
-  row: "9px"
-  stack: "14px"
-  block: "18px"
-  sign-inset: "22px"
-  sign-inset-hero: "26px"
-  sign-inset-phone: "16px"
+  gutter: "28px"
+  gutter-phone: "16px"
+  grid-gap: "20px"
+  tile-pad: "30px"
+  tile-pad-phone: "22px"
+  feature-pad: "44px"
+  section: "96px"
+  section-phone: "68px"
 components:
   button-primary:
-    backgroundColor: "{colors.plate-navy}"
-    textColor: "{colors.enamel-white}"
-    typography: "{typography.label}"
+    backgroundColor: "{colors.ink-navy}"
+    textColor: "{colors.canvas-white}"
     rounded: "{rounded.pill}"
-    padding: "13px 20px 11px"
+    padding: "11px 18px"
   button-primary-hover:
-    backgroundColor: "{colors.trunk-orange}"
-    textColor: "{colors.on-orange}"
+    backgroundColor: "{colors.ink-navy-hover}"
   button-ghost:
-    backgroundColor: "transparent"
-    textColor: "{colors.plate-navy}"
+    backgroundColor: "{colors.canvas-white}"
+    textColor: "{colors.ink-navy}"
     rounded: "{rounded.pill}"
-    padding: "13px 20px 11px"
+    padding: "11px 18px"
   button-ghost-hover:
-    backgroundColor: "{colors.plate-navy}"
-    textColor: "{colors.enamel-white}"
-  chip-button:
-    backgroundColor: "{colors.enamel-white}"
-    textColor: "{colors.plate-navy}"
+    backgroundColor: "{colors.cool-grey}"
+  button-small:
     rounded: "{rounded.pill}"
-    padding: "8px 14px"
-  sign:
-    backgroundColor: "{colors.enamel-white}"
-    textColor: "{colors.plate-navy}"
-    rounded: "{rounded.sign}"
-    width: "min(560px, 100%)"
-  sign-head:
-    backgroundColor: "{colors.plate-navy}"
-    textColor: "{colors.enamel-white}"
-    typography: "{typography.headline}"
-    padding: "16px 22px 13px"
-  hero-role-band:
-    backgroundColor: "{colors.trunk-orange}"
-    textColor: "{colors.on-orange}"
-    padding: "9px 26px 7px"
-  line-chip:
-    backgroundColor: "transparent"
-    textColor: "{colors.timetable-ink}"
+    padding: "9px 14px"
+  chip:
+    backgroundColor: "{colors.cool-grey}"
+    textColor: "{colors.body-slate}"
     typography: "{typography.label}"
     rounded: "{rounded.pill}"
-    padding: "3px 10px 2px 4px"
-  change-note:
-    backgroundColor: "{colors.platform-tint}"
-    textColor: "{colors.plate-navy}"
-    rounded: "{rounded.label}"
-    padding: "7px 10px 5px"
-  map-key:
-    backgroundColor: "{colors.enamel-white}"
-    rounded: "{rounded.sign}"
-    width: "286px"
-  map-key-item-current:
-    backgroundColor: "{colors.platform-tint}"
-    textColor: "{colors.plate-navy}"
-  map-label:
-    backgroundColor: "{colors.enamel-white}"
-    textColor: "{colors.plate-navy}"
-    rounded: "{rounded.label}"
-    padding: "4px 7px 3px"
-  map-label-hub:
-    backgroundColor: "{colors.plate-navy}"
-    textColor: "{colors.enamel-white}"
+    padding: "3px 10px"
+  nav-link:
+    textColor: "{colors.body-slate}"
+    rounded: "{rounded.sm}"
+    padding: "8px 12px"
+  nav-link-hover:
+    backgroundColor: "{colors.cool-grey}"
+    textColor: "{colors.ink-navy}"
+  tile:
+    backgroundColor: "{colors.canvas-white}"
+    rounded: "{rounded.tile}"
+    padding: "{spacing.tile-pad}"
+  feature-card:
+    backgroundColor: "{colors.canvas-white}"
+    rounded: "{rounded.feature}"
+    padding: "{spacing.feature-pad}"
+  contact-card:
+    backgroundColor: "{colors.canvas-white}"
+    rounded: "{rounded.feature}"
+    padding: "48px"
+  diagram-panel:
+    backgroundColor: "{colors.canvas-white}"
+    rounded: "{rounded.panel}"
+  perf-inset:
+    backgroundColor: "{colors.cool-grey}"
+    rounded: "{rounded.inset}"
+    padding: "24px"
 ---
 
 # Design System: Zeeshan Tanveer Portfolio
 
 ## Overview
 
-**Creative North Star: "The Orange Line System Map"**
+**Creative North Star: "The Product Page for Shipped Systems"**
 
-The page is a printed metro system map that has been lifted into three dimensions. An enamel signage ground carries a pale Ravi river band; route lines in full transit colour run between white roundel stations; every piece of content is a deep navy platform sign bolted over the map. The stack is the network: storefront lines (Shopify green, WooCommerce purple, Magento red, WordPress blue) feed the FreightDesk interchange, the orange trunk runs out to the carrier hub and its grey spurs, and the teal real-time line runs to the chatbot terminus. Scrolling rides the camera from stop to stop.
+This is the category standard executed at product-site craft. The page reads like a Stripe, Linear or Vercel product page, except the product is the work: live platforms, carrier integrations, storefront apps and chatbots. Conventions are taken straight (hero, featured case study, project grid, experience, stack, contact) and the quality is carried by execution: white and cool-grey grounds, deep navy ink, crisp hairlines, soft neutral shadows, one live gradient field and diagrams drawn in code.
 
-The density is that of public signage: few words per plate, large confident lettering, measured figures set like a timetable, nothing ornamental that a transit authority would not print. Bilingual naming (English in Overpass, Urdu in Nastaliq beside it) places the network in Lahore without decoration. The map, the trains and the timetables are the imagery; there are no photographs or rasters.
+The world has exactly one loud material: a skewed WebGL gradient band in peach, coral, violet and teal. It sits behind the hero and behind the closing contact card and nowhere else. Everything between those two bands is quiet: white cards on a cool-grey section, navy headings, slate body copy, violet used sparingly for links, checks and focus. Imagery is code-led: inline SVG system diagrams and small illustrative UI sketches, each labelled as illustration, never raster screenshots or generated pictures.
 
-The system refuses the developer-portfolio defaults it was chosen against: a name hero over a grid of project cards, and the dark neon look. Light enamel ground, navy plates and transit colour are the whole vocabulary.
+Geist and Geist Mono are a deliberate choice, tied directly to the Vercel quality bar the user picked. The detector flags Geist as an overused font; that warning was weighed and accepted here because the reference category is the point, and the face is used with tight tracking, balanced wrapping and a strict mono rule rather than as a default. The dark neon developer look and the plain template resume are both rejected.
 
 **Key Characteristics:**
-- Enamel ground, navy plates, full-saturation route colours used only as lines, bands, roundels and chips.
-- One shared network dataset drives the 3D map, the drawn SVG fallback and the map key.
-- Every content block is a platform sign: navy head, line-coloured band, enamel body.
-- Measured results live in timetable tables set in Overpass Mono with tabular figures.
-- Urdu station names in Nastaliq sit opposite every English sign title.
-- Motion is one clock for trains and a scroll-scrubbed camera; content is always visible without it.
+- Light, airy grounds: white sections alternating with cool-grey sections bounded by hairlines.
+- One gradient material, on a skewed band, at the top and the bottom of the page only.
+- Geist for everything at weight 650 with -0.03em tracking on headings; Geist Mono only for figures, dates and prices.
+- Soft, cool, neutral shadows under white cards; 1px hairline borders everywhere else.
+- Live diagrams and illustrative UI in place of screenshots, always labelled.
+- Motion that confirms rather than performs: content visible by default, gentle nudges, pointer tilt on fine pointers only.
 
 ## Colors
 
-A signage palette: two neutrals of enamel, one navy for every plate and all text, and six route colours that each belong to exactly one line of the network.
+A cool, near-monochrome navy and slate system on white, lit by one warm-to-cool gradient field and a single violet accent.
 
 ### Primary
-- **Plate Navy** (#14253f): every sign head, the brand pill, primary buttons, hub labels, station roundel rims in 3D and SVG, body text, and the default bullet ring. It is also `--ink`; text and plates are the same navy.
-- **Trunk Orange** (#f26b21): the FreightDesk trunk line, the hero role band, focus rings, text selection, primary button hover, and the default band of a route list or go-link when no line colour is set.
+- **Ink Navy** (ink-navy): all headings, primary button fill, user chat bubbles, brand mark tile, strong labels inside cards and diagrams. Hover on the primary button lifts to **Ink Navy Hover** (ink-navy-hover).
+- **Signal Violet** (accent-violet): focus ring (3px outline), check icons in the case study, experience list markers. Its ink-dark sibling **Deep Signal Violet** (accent-violet-ink) carries text: text links, the performance figures, contact link hover.
 
-### Secondary (route colours; one per line)
-- **Shopify Green** (#2e9e4f): the Shopify line and its stop. Also the "good service" pulse ring and the visited punch tick on the key.
-- **WooCommerce Purple** (#7a3e9d): the WooCommerce line.
-- **Magento Red** (#d6332b): the Magento line.
-- **WordPress Blue** (#1e5aa8): the WordPress branch line, and the earliest segment of the service-history track.
-- **Real-time Teal** (#0a8f96): the WebSockets and AI chat line (Haleria to Eniture).
-- **Spur Grey** (#8d96a0): carrier spurs off the carrier hub, and the neutral track of the standards route list. Decorative line colour only, never text.
+### Secondary
+- **Gradient Field** (field-peach, field-coral, field-violet, field-teal): the four stops of the WebGL shader and its static CSS fallback (`linear-gradient(115deg, #ffb37a, #ff6f91 35%, #8f6bff 65%, #3fd0e0)`). Used only inside the skewed bands.
+- **Data Gradient** (data-violet to data-teal): the "after" performance bars and their legend key, a 90deg left-to-right gradient. Teal also colours one lane of moving packets in the order-flow diagram.
 
 ### Tertiary
-- **Trunk Orange Ink** (#b4470c): orange when it must read as text on enamel: go-link hover and timeline dates.
-- **On Orange** (#1a0d04): the near-black brown used for text set on Trunk Orange (hero role band, hovered primary button). White is never set on orange.
+- **Platform dots** (shopify-green, woo-purple, magento-orange): small identifying dots and packets for Shopify, WooCommerce and Magento in the diagrams; Shopify green also draws the storefront app-block outline and selected rate radio; Woo purple fills the "on" toggle in the WordPress sketch; Magento orange is the packet riding the Magento sync wire. These are identity marks, never fills for large areas.
 
 ### Neutral
-- **Enamel Ground** (#eef1ee): page background, header bar, 3D scene background, fog colour and ground plane, SVG label halo.
-- **Enamel White** (#fbfcfb): sign bodies, map key, station roundel faces, train bodies, map label plates.
-- **Plate Navy Raised** (#22385c): scrollbar thumb; the one lighter navy.
-- **Timetable Ink** (#3e4f68): secondary text: sign paragraphs, timetable row heads, key items at rest, chip text, footer.
-- **Platform Rule** (#d3d9de): 1.5px hairlines between timetable rows, under the header bar, around line chips, above the key footer.
-- **Platform Tint** (#e6eaee): the "change here" note and the current stop in the key.
-- **Ravi Blue** (#cfe2ec): the river band in 3D and SVG.
-- **Ravi Ink** (#5f8aa0): the spaced italic RAVI river label only.
+- **Canvas White** (canvas-white): page ground, cards, tiles, diagram nodes, nav background (solid, never translucent).
+- **Cool Grey** (cool-grey): alternate section ground (Work, Stack), illustration tints inside tiles, chip fill, performance inset, nav link hover.
+- **Body Slate** (body-slate): running text and secondary diagram labels.
+- **Muted Slate** (muted-slate): captions, dates, legends, stat descriptions, footer.
+- **Hairline** (hairline): every 1px border, row divider and section edge. **Strong Hairline** (hairline-strong) for ghost button borders, diagram wires and hover borders.
+- **Bar Track and Before** (bar-track, bar-before): the grey rail and the "before" fill of the performance bars.
 
 ### Named Rules
-**The One Line, One Colour Rule.** Each route colour names exactly one line of the network. A stop's `--c` is its line colour, and it colours that stop's head band, head roundel, built-list track, go-link underline and key swatch together. Never use a route colour for an unrelated accent.
+**The One Field Rule.** The gradient is a material, not a decoration. It appears only on the skewed band behind the hero and behind the contact card. Never use it as a card fill, text fill or section background elsewhere.
 
-**The Navy Plate Rule.** All text and all sign heads are Plate Navy on enamel, or white on navy. Route colours carry no body text; on orange the text is On Orange, never white.
+**The Quiet Middle Rule.** Between the two bands, colour is carried by navy, slate and hairlines. Violet appears only as links, checks, markers and focus; platform colours appear only as small dots, outlines and packets.
 
-**The Shared Network Rule.** Line colours exist twice: as CSS custom properties and as hex literals in the `NET` dataset that builds the 3D map, the SVG fallback and the key. Change both together or the map and the signs drift apart.
+**The Identity Dot Rule.** Shopify, WooCommerce and Magento are always marked by their own colour (shopify-green, woo-purple, magento-orange) and nothing else is.
 
 ## Typography
 
-**Display Font:** Overpass variable, 100 to 900 (with system-ui, sans-serif)
-**Body Font:** Overpass (same family)
-**Label/Mono Font:** Overpass Mono, 300 to 700 (with ui-monospace, monospace)
-**Script Font:** Nastaliq Sign, a self-hosted Nastaliq subset at weight 500, for Urdu names only
+**Display Font:** Geist (with system-ui, sans-serif), self-hosted variable woff2, weights 100 to 900
+**Body Font:** Geist
+**Label/Mono Font:** Geist Mono (with ui-monospace, monospace), tabular figures
 
-**Character:** Overpass is a highway-signage face; at weight 800 with tight tracking it reads as a platform plate, and at 400 it is a plain, open reading face. Overpass Mono with tabular figures turns measured results into a timetable. Nastaliq gives every plate a second, local name.
+**Character:** One neo-grotesque family, tight and confident in headings, calm in body; the mono face is a precision instrument reserved for numbers.
 
 ### Hierarchy
-- **Display** (800, clamp(38px, 5.4vw, 70px), line-height 0.98, tracking -0.03em): the name on the hero sign only.
-- **Terminus headline** (800, clamp(30px, 4vw, 48px)): the terminus sign title, one step below display.
-- **Headline** (800, clamp(24px, 2.6vw, 32px), line-height 1.05, tracking -0.015em): every sign head title, preceded by its line roundel.
-- **Title** (800, 19px, line-height 1.2): service-history entries. Route-list item titles use 800 at 16.5px.
-- **Body** (400, 17px, line-height 1.55; 16px on phones): sign paragraphs. The hero paragraph is 18px with a 52ch measure. Built-list items are 15.5px, notes 14px.
-- **Label** (700, 13 to 14.5px): line chips (13.5px), map labels (13px, hubs 14px), key items (600, 14.5px), table captions (800, 13px, tracking 0.02em), chip buttons (700, 14px). Buttons are 800 at 16px. UI labels are never uppercase; only the map's river name is set in spaced capitals.
-- **Figure** (Overpass Mono 600, 14 to 15px, tabular-nums): timetable values, right-aligned, and timeline dates.
-- **Urdu** (Nastaliq Sign 500, line-height 1.9, right-to-left): 22px on sign heads at 90% opacity, clamp(24px, 2.6vw, 34px) on the hero, 15px on the key head.
+- **Display** (650, clamp(38px, 4.6vw, 62px), 1.08, -0.03em): the hero headline only. 34px at phone width.
+- **Headline** (650, clamp(32px, 3.6vw, 48px), 1.08, -0.03em): section titles; the contact card title runs slightly larger, clamp(32px, 3.8vw, 50px).
+- **Title** (650, 23px, -0.02em): tile titles; experience role titles at 22px; the featured case study title steps up to clamp(28px, 2.6vw, 36px).
+- **Lede** (500, 19px, 1.55, ink-navy, max 40ch): the hero sub-line. Section intros sit at 18.5px in body slate.
+- **Body** (400, 17px, 1.6): running copy; card copy at 15.5px; nav links at 15px weight 500.
+- **Label** (500, 13px): chips, captions, legends, contact labels; diagram node labels 12 to 13px at 500 to 600.
+- **Figure** (Geist Mono 500, 22px, -0.02em, tabular): stat values, dates in the experience list (14px), prices and rate amounts in sketches (12.5 to 15px), the shipment counter.
 
 ### Named Rules
-**The Timetable Rule.** Any measured number (counts, times, percentages) is set in Overpass Mono with tabular figures inside a timetable table: row head left in Overpass, value right in Mono. Narrative copy stays in Overpass.
+**The Balanced Heading Rule.** Every h1, h2 and h3 is Geist 650 at -0.03em (tiles and roles -0.02em), line height 1.08, with `text-wrap: balance`. No heading is uppercase or tracked open.
 
-**The Two Names Rule.** Every sign head and the key head pair the English title with its Urdu name in Nastaliq, marked `lang="ur"`. The Urdu sits opposite the title, never inline in body copy.
+**The Mono Is For Numbers Rule.** Geist Mono appears only on figures, dates, prices and counters. Never on headings, labels, buttons or body copy.
 
 ## Layout
 
-The 3D map is a fixed full-viewport layer (z 0) with its CSS label layer above it (z 1). Content scrolls over it in `main` (z 10) as a column of stops; the header bar (z 40) and map key (z 30) are fixed.
+A single centred column, max width 1180px, with 28px side gutters (16px at 760px and below). Sections run 96px top and bottom (68px at 760px and below) and alternate white and cool-grey, the grey ones bounded by hairlines top and bottom. Section heads cap at 680px with 48px below.
 
-- **Stops.** Each stop is at least 92svh tall, a flex row that centres its sign vertically, padded 110px top, 4vw sides, 80px bottom. Stops alternate left and right (`.right` pushes the sign to the right edge) so the camera can frame the station in the free half of the screen. Above 900px, right-hand stops reserve 340px on the right so signs never sit under the fixed key. The hero aligns its sign to the bottom with 9vh below.
-- **Sign widths.** Standard signs are min(560px, 100%); the terminus is 720px; service history is 980px and bottom-aligned on desktop.
-- **Inner rhythm.** Sign insets 22px (26px on the hero, 16px on phones). Vertical rhythm inside a body steps 6, 9, 14, 18px: chip gaps 6px, built-list rows 9px, paragraph spacing 14px, block spacing 18px.
-- **Breakpoints.** 901px and up: fixed key at bottom right (22px inset, 286px wide). 900px and below: the key becomes a sheet opened by a "Stops" chip button in the header, inset 12px; the service-history track turns vertical. 640px and below: body 16px, header padding 10px 12px, chip button text hidden to icon only, contact list single column, the hero service line hidden.
-- **Phone map windows.** On phones every stop except the hero drops its minimum height and gains 58svh of top padding, so each stop opens on a clear window of the map with the camera framing its station, and the sign then scrolls up over it. Signs centre horizontally and sit at the bottom.
+- **Hero:** two columns (1.02fr / 1fr, 56px gap): copy on the gradient at left, the tilting diagram panel at right. Padding 72px top, 120px bottom. Collapses to one column at 1000px.
+- **Featured case study:** one wide card, two columns (1fr / 1.05fr, 48px gap): narrative, chips and checks at left; performance inset and stat row at right. One column at 1000px.
+- **Bento:** a 6-column grid with 20px gaps. Shopify spans 4, Haleria 2; WordPress and Magento 3 each; the Eniture tile spans all 6 as a horizontal row. Every tile spans 6 at 1000px.
+- **Experience:** a hairline-ruled list with a 220px date column and a 32px gap; stacks at 760px.
+- **Stack:** two columns of definition rows (170px term column), one column at 1000px, stacked term over description at 760px.
+- **Contact:** a white card (max 760px) floating on the lower band; its contact list is two columns, one at 760px.
+
+**Breakpoints:** 1000px (grids collapse), 760px (phone layout, menu, tighter gutters, flat panel), 600px (vertical order-flow diagram, stacked bar labels).
 
 ## Elevation & Depth
 
-Depth is literal: the map is a lit 3D scene, and the HTML layer reads as enamel plates mounted in front of it. The page uses soft, navy-tinted, downward shadows for the plates and a single directional sun for the map. Nothing else is shadowed; chips, buttons and the header are flat.
+A hybrid: surfaces are flat and separated by hairlines by default, and a short ladder of soft, cool, neutral shadows lifts the three kinds of white object that sit on a ground. Shadows are tinted with the navy-slate hue (rgba(20, 30, 45, a)), never pure black, never coloured, never hard-edged. Depth in the hero also comes from real 3D perspective on the diagram panel.
 
 ### Shadow Vocabulary
-- **Platform plate** (`box-shadow: 0 2px 4px rgba(20, 37, 63, .08), 0 24px 48px -24px rgba(20, 37, 63, .45)`): every platform sign.
-- **Key plate** (`box-shadow: 0 2px 4px rgba(20, 37, 63, .08), 0 18px 40px -20px rgba(20, 37, 63, .45)`): the map key, a slightly shorter drop.
-- **Label tab** (`box-shadow: 0 1px 2px rgba(20, 37, 63, .18)`): station labels floating over the map.
-- **Map ground shadow**: one directional sun from upper left casting soft PCF shadows onto a navy shadow layer at 13% opacity over the unlit enamel ground. Tubes, trains and roundels cast; shadows are switched off on phones.
+- **Rest** (`0 1px 2px rgba(20,30,45,.06), 0 2px 6px rgba(20,30,45,.05)`): bento tiles at rest.
+- **Raised** (`0 2px 4px rgba(20,30,45,.05), 0 18px 40px -12px rgba(20,30,45,.18)`): the featured case study card, tiles on hover, the phone menu sheet.
+- **Floating** (`0 4px 10px rgba(20,30,45,.06), 0 40px 80px -24px rgba(20,30,45,.26)`): objects that sit on the gradient: the hero diagram panel and the contact card.
+- **Button** (`0 1px 2px rgba(20,30,45,.18), 0 4px 10px -4px rgba(20,30,45,.28)`): primary button only.
 
 ### Named Rules
-**The Navy Shadow Rule.** Every shadow is tinted Plate Navy (rgb 20, 37, 63), never neutral black, and falls straight down. No offset or hard-edged shadows.
+**The Float On The Field Rule.** Only objects resting on the gradient band take the Floating shadow. Cards on white or grey grounds use Rest or Raised.
+
+**The Soft Shadow Rule.** Every shadow is a diffuse, negative-spread, navy-tinted blur. No hard offset shadows, no glows, no coloured shadows.
 
 ## Shapes
 
-Transit geometry: pills, circles and gently squared plates.
+Generously but not cartoonishly rounded, scaling with the object: 8px for nav links and the brand mark, 10px for inner nodes, sketch blocks and setting rows, 14px for chat bubbles (with a 4px tail corner on the speaker side), 16px for the performance inset and the diagram core, 18px for the hero panel, 20px for bento tiles, 22px for the feature and contact cards. Buttons, chips, live badges, toggles and bars are full pills (999px). Diagram nodes inside SVG use rx 10 to 16 to match.
 
-- **Plates** (6px radius): signs, the key, the skip link. Corners are only slightly softened, like pressed enamel.
-- **Tabs** (4px radius): map labels, the change note, focus rings.
-- **Pills** (999px): every button, chip button, line chip and the brand mark.
-- **Roundels** (50%): the brand roundel (orange ring crossed by a bar), sign-head roundels (enamel face with a 5px ring in the line colour), station markers (enamel face with a navy ring), list stop dots, key swatch dots, chip dots.
-- **Tracks** (rounded bars, 4 to 7px thick, radius half the thickness): built-list track, route-list track, service-history track, key swatches. In 3D, lines are tubes with 2-unit rounded corners at every bend, like a printed metro diagram.
+The one hard silhouette is the skewed band: the hero band is clipped to `polygon(0 0, 100% 0, 100% 46%, 60% 100%, 0 100%)`, a diagonal that drops from the right edge to 60% across the bottom, so the gradient reaches into the Work section at the left; the contact band is clipped to `polygon(0 18%, 100% 0, 100% 100%, 0 100%)`, rising from left to right. At 760px and below the hero band becomes a fixed 570px tall shape clipped to `polygon(0 0, 100% 0, 100% 90%, 0 100%)`.
+
+Illustrations bleed to the tile edge: the illustration block takes negative margins equal to the tile padding, keeps the tile's top corners (20px 20px 0 0), and sits on a cool-grey tint with a hairline beneath.
 
 ## Components
 
 ### Buttons
-Confident and pill-shaped, like the destination blinds on a train.
-- **Shape:** full pill (999px), 2px Plate Navy border, Overpass 800 at 16px, padding 13px 20px 11px, an inline 17px stroke icon after the label.
-- **Primary:** Plate Navy fill, white text. Hover fills Trunk Orange with On Orange text and an orange border.
-- **Ghost:** transparent with navy text and border. Hover fills navy with white text.
-- **Transitions:** background and colour 0.25s on the house ease-out; removed under reduced motion.
-- **Chip button (header):** smaller pill (8px 14px, 700 at 14px) on Enamel White with a 2px navy border and a 16px icon; hover inverts to navy. On phones the label hides and the icon remains, with a screen-reader label kept.
-- **Focus:** a 3px Trunk Orange outline at 3px offset on every focusable element.
+Confident, compact pills.
+- **Shape:** full pill (999px), 11px by 18px, Geist 600 15px, 8px gap to a 16px stroke icon.
+- **Primary:** ink-navy fill, white text, Button shadow. Hover lifts 1px, darkens to ink-navy-hover and slides the arrow 3px right.
+- **Ghost:** white (92% on the gradient) with a strong hairline border and navy text. Hover warms the border to #b9c3d2 and the fill to cool grey.
+- **Small:** 9px by 14px at 14px; used for the nav Download CV, whose label hides at 760px leaving the icon.
+- **Focus:** global 3px accent-violet outline, 3px offset.
+- **Text link:** Deep Signal Violet, 600, with a diagonal arrow that nudges 2px up-right on hover.
 
 ### Chips
-- **Line chip:** a pill with a 1.5px Platform Rule border, Timetable Ink text at 700 13.5px, and a 16px solid dot in the chip's own line colour on its left. A stop's chips can mix lines (WordPress blue beside WooCommerce purple) to show which lines meet there.
+- **Style:** cool-grey fill, 1px hairline, body-slate 13px 500, pill, 3px by 10px. Lists of stack terms only.
+- **Placement:** in the featured case study they sit directly under the description; in tiles they sit below the copy, above the link.
 
-### Platform Sign (signature component)
-The container for every piece of content.
-- **Body:** Enamel White, 6px radius, platform-plate shadow, clipped corners.
-- **Head:** Plate Navy with white Overpass 800 title, preceded by a 22px head roundel in the stop's line colour, and the Urdu name opposite at 90% opacity. When the stop has a line, a 6px band in that colour runs under the head.
-- **Hero variant:** larger insets, display-size name, and a full-width Trunk Orange role band under the head with On Orange text.
-- **Line chips** under the head, then the body.
-- **Change note:** a Platform Tint tab in navy 700, "Change here for..." at interchanges.
-- **Built list:** items hang on a 4px track in the line colour, each marked by a 10px enamel stop dot with a 3px navy ring.
-- **Timetable:** full-width table, a 13px 800 caption, rows divided by 1.5px Platform Rule, row heads in Timetable Ink 600, values right-aligned in Overpass Mono 600.
-- **Go-link:** navy 800 text with a 3px underline bar in the line colour and an up-right arrow icon; hover turns the text Trunk Orange Ink.
+### Cards / Containers
+- **Feature card:** white, 22px corners, hairline border, Raised shadow, 44px padding (32px at 1000px, 22px at 760px).
+- **Bento tile:** white, 20px corners, hairline border, Rest shadow, 30px padding (22px at 760px), 14px internal gap, link pinned to the bottom. Hover raises to Raised with a strong hairline; on fine pointers it leans up to 2deg toward the pointer.
+- **Performance inset:** cool-grey, 16px corners, 24px padding, no border, no shadow.
+- **Stat rows:** a hairline above, cells divided by vertical hairlines, Geist Mono figure over a muted 13.5px description. Never boxed.
 
-### Map Key (navigation)
-A small navy-headed plate listing every stop. Each row is a three-column grid: a 6px line swatch with a navy-ringed stop dot centred on it, the stop name, and a green tick that punches in (fade and scale from 0.4) once the stop is visited. The current stop gets Platform Tint and navy 800 text; hover gets Enamel Ground. The footer counts visited stops, says the ride is saved on the device, and offers a Reset text button. Visited stops and the last stop are stored in local storage and offered back on the hero as a resume link.
+### Navigation
+- **Style:** sticky, solid white, 68px tall. Brand: a 30px ink-navy rounded tile holding a white mark, name in Geist 650. Links: 15px 500 body slate, 8px by 12px, 8px corners; hover goes ink with a cool-grey fill. A hairline and a near-invisible shadow appear once the page scrolls past 8px.
+- **Mobile (760px):** links collapse into a 40px bordered menu button that opens a full-width white sheet below the bar, with a hairline and Raised shadow; tapping a link closes it.
 
-### Route List
-A vertical line for lists of practices: a 6px Spur Grey track with 14px enamel stops ringed 3.5px in navy, each item a navy 800 title over a Timetable Ink line.
+### Gradient Band (signature)
+A raw WebGL fragment shader (no library) paints two layers of 3D value noise blending the four field colours, drifting slowly and shifting a little with the pointer. It renders at reduced resolution (devicePixelRatio capped at 1.25, times 0.6) and lets CSS scale it soft; it pauses when off screen or the tab is hidden. The CSS linear gradient beneath is the fallback when WebGL is missing. With reduced motion it draws a single still frame.
 
-### Service History Timeline
-A horizontal track (vertical at 900px and below) 7px thick, painted in hard-stopped segments of WordPress Blue, WooCommerce Purple and Trunk Orange to mark eras, with 22px enamel stops ringed 4px in navy. Each entry: a Mono date in Trunk Orange Ink, a 19px 800 title, and supporting text.
+### Hero Diagram Panel (signature)
+A white figure (18px corners, Floating shadow, translucent white edge) in a 1400px perspective stage, resting at rotateX 6deg, rotateY -10deg. On fine pointers it tilts to follow the pointer and eases back over 0.6s on leave. A header row carries the title and a green pill "Live diagram" badge; a hairline footer carries the "Illustration of the real architecture" caption and a mono counter. Flat (no tilt) at 760px and below.
 
-### The 3D Network Map
-- **Scene:** Enamel Ground background and ground plane with fog from 130 to 280 units; hemisphere light plus one shadow-casting sun; the Ravi as a flat pale blue ribbon below the network.
-- **Lines:** tubes (radius 0.34; spurs 0.18) along metro paths with rounded bends, satin finish.
-- **Stations:** enamel cylinders with a navy torus rim on top and a navy band at the base; hubs are larger (1.1 vs 0.8).
-- **Trains:** white box bodies with end caps in the line colour, roughly one train per 9 units of line, all moving at one speed on one clock.
-- **Labels:** CSS labels on enamel tabs above each station; hubs are navy tabs; line ends read "from Shopify stores" and similar in plain Timetable Ink; the river label is spaced italic RAVI.
-- **Camera ride:** each stop has a pose that places its station in the free side of the screen, clear of its sign. Scroll position between two stops scrubs the camera between their poses with a hold at each end (the first and last 18% of the span are still, the middle eased with smoothstep), damped toward the target each frame. Wide stops (hero, service history, terminus) pull back to an overview. The opening frame glides down from a higher, further pose. A slight pointer parallax adds life on desktop.
-- **Line dimming:** arriving at a stop fades every line not serving it to 16% opacity over 0.9s and stops it casting shadows; labels of stations and line ends off those lines hide.
-- **Label hiding:** labels hide when they would clip the viewport edge (beyond 82% horizontally or 86% vertically from centre) or come within 6px of any sign, the key or the header. Overview stops show only hub, line-end and river labels. On phones only hub labels show, and at overview only FreightDesk.
-- **Budget:** pixel ratio capped at 1.75 (1.5 on phones), shadows off on phones, rendering paused while the tab is hidden.
+### Order-Flow Diagram (signature)
+Inline SVG: platform nodes (white, hairline, rx 11, identity dot) wire into a violet-tinted FreightDesk core (gradient #f6f4ff to #eefbfd, stroke #d6d0fb) containing four stack nodes, which wire out to carrier nodes. Wires are 1.6px strong-hairline curves. Packets (4.5px circles in platform colours, then violet or teal on the outbound side) are spawned on one clock, ride the paths and fade at both ends. At 600px a vertical version replaces it: three platforms across the top, a 2 by 2 core, two carriers across the bottom. Reduced motion freezes packets mid-path.
 
-### Drawn Fallback Map
-An SVG built from the same network data: the river band, grey spurs, coloured polylines, enamel station circles with navy rims, navy labels with an Enamel Ground halo placed clear of every line, and the RAVI label. It is the poster shown at once while 3D loads, crossfading out over 0.9s when the first frame renders, and it is the whole map when WebGL is unavailable or reduced motion is requested.
+### Performance Bars
+Pairs of 10px pill bars on a bar-track rail: "before" in bar-before at full width, "after" in the violet-to-teal data gradient at its measured share. A navy label sits left and a Deep Signal Violet mono range sits right (stacked at 600px). A small legend follows.
+
+### Bento Illustrations
+Each tile with a picture opens on a bleeding cool-grey illustration block captioned at bottom right with a small white label ("Illustration" or "Demo conversation"). Contents are code-drawn UI: a storefront with a hand-drawn SVG shelving unit and a Shopify app block of shipping rates; a WordPress settings list with pill toggles; a Magento to FreightDesk sync wire with a riding dot.
+
+### Chat Demo
+Bubbles at 14px corners, 14px text, max 88% width: the visitor's in ink-navy with white text, aligned right with a 4px bottom-right corner; the bot's white with a hairline, aligned left with a 4px bottom-left corner. They play in one by one (1.1s apart) when the tile is 40% visible. A two-cell mono stat row follows.
+
+### Experience List and Stack Rows
+Experience: hairline-ruled rows, mono date and muted organisation at left, 22px role title and a violet-marked bullet list at right. Stack: definition rows with a hairline above, navy 600 term and slate description, both 15.5px.
+
+### Contact Card
+A white card on the rising contact band: 22px corners, Floating shadow, 48px padding (28px by 22px at phone). Headline, line, primary and ghost buttons, then a hairline-topped two-column list of muted labels over navy 600 links that turn violet and underline on hover.
 
 ### Motion
-- **House ease:** cubic-bezier(.16, 1, .3, 1) in CSS, expo.out in GSAP.
-- **Sign arrival:** signs are visible by default. When a stop enters (top at 70% of the viewport, once), the sign eases from a 60px horizontal nudge toward its side (40px upward on phones) and 75% opacity over 1.1s; the head wipes in left to right by clip over 0.9s; chips, list items, table rows and timeline entries rise 14px from 70% opacity with a 0.05s stagger.
-- **Reduced motion or no WebGL:** no 3D, no sign motion, no transitions on buttons, labels or the key punch; the drawn map stands still behind plain scrolling, and key tracking and ride memory still work.
+- **Easing:** one curve everywhere, `cubic-bezier(.16, 1, .3, 1)`; GSAP uses expo.out to match.
+- **Reveals:** content is visible by default. With JS, sections below the fold start nudged (22px down, 60% opacity) and settle over 0.9s when they arrive. Nothing ever starts invisible.
+- **Bars:** "before" bars grow from zero (0.9s), then "after" bars (1.4s, 0.5s delay), once, at 40% visibility.
+- **Ambient:** the flow packets, the Magento wire dot (2.4s loop) and a WordPress toggle that flips every 2.6s.
+- **Reduced motion:** all CSS animation and transition is disabled, the panel sits flat, packets freeze, the chat shows complete, bars show final widths, the gradient is a still frame.
 
 ## Do's and Don'ts
 
 ### Do:
-- **Do** put every content block on a platform sign: navy head with roundel and Urdu name, line-coloured band, enamel body.
-- **Do** colour a stop entirely from its one line colour (`--c`): band, head roundel, built-list track, go-link underline, key swatch.
-- **Do** set measured results in a timetable table with Overpass Mono tabular figures, right-aligned.
-- **Do** keep the network data single-sourced so the 3D map, the SVG fallback and the key always agree.
-- **Do** frame each station in the free half of the screen and hide any map label a sign would cut through.
-- **Do** keep content visible before any motion runs; motion only nudges signs from an already-readable state.
-- **Do** give phones a 58svh map window above each stop's sign.
-- **Do** tint every shadow Plate Navy and let it fall straight down.
+- **Do** keep grounds white (canvas-white) and cool grey (cool-grey), separated by 1px hairlines (hairline).
+- **Do** set every heading in Geist 650 at -0.03em with balanced wrapping, in ink-navy.
+- **Do** confine the gradient to the skewed bands behind the hero and the closing contact card, and float white objects on it with the Floating shadow.
+- **Do** draw imagery as inline SVG or code-built UI and label it ("Illustration", "Demo conversation", "Illustration of the real architecture").
+- **Do** use Geist Mono with tabular figures for every number that measures something: stats, dates, prices, counters.
+- **Do** mark Shopify, WooCommerce and Magento with their identity colours as small dots, outlines and packets.
+- **Do** start every animated element in its visible state and give reduced motion a complete, still version.
+- **Do** use the pill ink-navy primary and the white ghost as the only button pair.
 
 ### Don't:
-- **Don't** build a name hero over a grid of project cards, or use a dark neon developer look.
-- **Don't** use a route colour for anything other than its line, or set body text in a route colour.
-- **Don't** set white text on Trunk Orange; use On Orange (#1a0d04).
-- **Don't** use Spur Grey or Ravi Ink for readable content text; they are line and map-label colours.
-- **Don't** set narrative copy in Overpass Mono, or uppercase UI labels; the spaced italic RAVI river name is the one cartographic exception.
-- **Don't** use hard offset shadows, glyph icons or photographic imagery; icons are inline stroke SVGs.
-- **Don't** let the 3D map be the only way to read a stop; every station is written out as text on its sign.
+- **Don't** go dark: no dark neon developer theme, no terminal green, no black grounds.
+- **Don't** fall back to a plain template resume layout without the product-page craft.
+- **Don't** use the gradient as a card fill, text fill or anywhere outside the two bands.
+- **Don't** use hard offset shadows, glows or coloured shadows; shadows are soft and navy-tinted.
+- **Don't** set headings, labels or buttons in Geist Mono.
+- **Don't** add kickers or eyebrow labels above headings.
+- **Don't** use raster screenshots or generated images in place of diagrams; never present an illustration as a real screenshot.
+- **Don't** make the nav translucent or blurred; it is solid white.

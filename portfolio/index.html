@@ -500,33 +500,6 @@
             font-weight: 500;
         }
 
-        /* ---------- PLATFORMS STRIP ---------- */
-        .strip {
-            padding: 6px 0 70px;
-        }
-
-        .strip p {
-            text-align: center;
-            font-size: 14px;
-            color: var(--muted);
-            margin-bottom: 16px;
-        }
-
-        .strip ul {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px 34px;
-            list-style: none;
-        }
-
-        .strip li {
-            font-size: 20px;
-            font-weight: 650;
-            letter-spacing: -0.02em;
-            color: #5e6b80;
-        }
-
         /* ---------- SECTIONS ---------- */
         section.block {
             padding: 96px 0;
@@ -1012,19 +985,6 @@
             border-bottom-left-radius: 4px;
         }
 
-        .typing {
-            display: inline-flex;
-            gap: 4px;
-            align-items: center;
-        }
-
-        .typing i {
-            width: 6px;
-            height: 6px;
-            border-radius: 50%;
-            background: #9aa6b8;
-        }
-
 
         .js .chat .msg {
             opacity: 0;
@@ -1351,10 +1311,6 @@
             transition: transform .9s var(--ease), opacity .9s var(--ease);
         }
 
-        .reduce .typing {
-            display: none;
-        }
-
         .js .rv.pre {
             transform: translateY(22px);
             opacity: .6;
@@ -1480,6 +1436,10 @@
 
             .tile {
                 padding: 22px;
+            }
+
+            .illus {
+                margin: -22px -22px 6px;
             }
 
             .store {
@@ -1875,6 +1835,7 @@
                                 <span class="wire"><b></b></span>
                                 <span class="node"><i style="background:var(--orange)"></i>FreightDesk</span>
                             </div>
+                            <span class="illus-cap">Illustration</span>
                         </div>
                         <h3 id="mg-title">Magento integration</h3>
                         <p>I integrated Magento with FreightDesk Online as a connected platform, so Magento store orders

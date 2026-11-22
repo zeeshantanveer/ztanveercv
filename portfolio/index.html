@@ -1729,16 +1729,17 @@
             scene.add(shade);
 
             const river = new THREE.Shape();
-            river.moveTo(-160, 18);
-            river.lineTo(-60, 18);
+            /* extensions continue each edge's own tangent, so the joins carry no kink */
+            river.moveTo(-160, 24);
+            river.bezierCurveTo(-130, 22, -100, 21, -60, 18);
             river.bezierCurveTo(-20, 15, -6, 22, 8, 17);
             river.bezierCurveTo(22, 12, 34, 13, 60, 16);
-            river.lineTo(160, 16);
-            river.lineTo(160, 23);
-            river.lineTo(60, 23);
+            river.bezierCurveTo(86, 19, 120, 20, 160, 20);
+            river.lineTo(160, 27);
+            river.bezierCurveTo(130, 27, 90, 26, 60, 23);
             river.bezierCurveTo(30, 20, 14, 26, 2, 24);
             river.bezierCurveTo(-14, 22, -30, 21, -60, 25);
-            river.lineTo(-160, 25);
+            river.bezierCurveTo(-90, 29, -120, 31, -160, 31);
             river.closePath();
             const riverMesh = new THREE.Mesh(new THREE.ShapeGeometry(river, 48), new THREE.MeshBasicMaterial({ color: '#cfe2ec', side: THREE.DoubleSide }));
             riverMesh.rotation.x = Math.PI / 2;

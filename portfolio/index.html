@@ -323,7 +323,7 @@
         /* ---------- HERO ---------- */
         .hero {
             position: relative;
-            padding: 72px 0 84px;
+            padding: 72px 0 120px;
             overflow: hidden;
             isolation: isolate;
         }
@@ -333,9 +333,9 @@
             left: 0;
             right: 0;
             top: -68px;
-            height: 640px;
+            bottom: 48px;
             z-index: -1;
-            clip-path: polygon(0 0, 100% 0, 100% 52%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 46%, 60% 100%, 0 100%);
             background: linear-gradient(115deg, #ffb37a, #ff6f91 35%, #8f6bff 65%, #3fd0e0);
         }
 
@@ -786,6 +786,16 @@
             grid-column: span 4;
         }
 
+        .t-shopify .illus {
+            flex: 1;
+            display: flex;
+            align-items: center;
+        }
+
+        .t-shopify .store {
+            width: 100%;
+        }
+
         .t-haleria {
             grid-column: span 2;
         }
@@ -855,8 +865,18 @@
 
         .store .img {
             border-radius: 10px;
-            background: linear-gradient(135deg, #dfe6ef, #eef2f7);
-            min-height: 250px;
+            background: #fff;
+            border: 1px solid var(--line);
+            display: grid;
+            place-items: center;
+            padding: 18px;
+            min-height: 230px;
+        }
+
+        .store .img svg {
+            width: 100%;
+            max-width: 220px;
+            height: auto;
         }
 
         .sk {
@@ -1263,6 +1283,7 @@
 
         .contact .band {
             top: 0;
+            bottom: auto;
             height: 100%;
             clip-path: polygon(0 18%, 100% 0, 100% 100%, 0 100%);
         }
@@ -1423,7 +1444,9 @@
             }
 
             .band {
-                height: 520px;
+                bottom: auto;
+                height: 570px;
+                clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
             }
 
             .hero-copy {
@@ -1746,7 +1769,22 @@
                     <article class="tile t-shopify rv" aria-labelledby="sh-title">
                         <div class="illus" aria-hidden="true">
                             <div class="store">
-                                <div class="img"></div>
+                                <div class="img"><svg viewBox="0 0 200 200" fill="none" stroke="#0b1b33" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M40 22v166M160 22v166" />
+                                    <path d="M40 30h120M40 82h120M40 134h120M40 180h120" stroke-width="3.2" />
+                                    <path d="M40 186l-8 4M160 186l8 4" />
+                                    <rect x="52" y="52" width="34" height="28" rx="2" fill="#ffe2d1" />
+                                    <path d="M52 62h34M69 52v10" />
+                                    <rect x="96" y="44" width="50" height="36" rx="2" fill="#e6e1ff" />
+                                    <path d="M96 56h50M121 44v12" />
+                                    <rect x="58" y="100" width="44" height="32" rx="2" fill="#d8f4f7" />
+                                    <path d="M58 111h44M80 100v11" />
+                                    <rect x="112" y="108" width="30" height="24" rx="2" fill="#ffe2d1" />
+                                    <rect x="50" y="150" width="40" height="28" rx="2" fill="#e6e1ff" />
+                                    <path d="M50 160h40M70 150v10" />
+                                    <rect x="98" y="146" width="52" height="32" rx="2" fill="#d8f4f7" />
+                                    <path d="M98 157h52M124 146v11" />
+                                </svg></div>
                                 <div>
                                     <h4>Steel Warehouse Shelving</h4>
                                     <p class="price">$249.00</p>

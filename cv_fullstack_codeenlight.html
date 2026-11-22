@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<!-- ATS-friendly CV tailored for CodeEnlight: Full-Stack Developer (Lahore, Laravel, React, WordPress, Shopify, Magento) -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeeshan Tanveer - Full-Stack Developer (Laravel, React, CMS)</title>
+    <style>
+        /* ATS-friendly: simple, clean styles with semantic HTML */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+            color: #222;
+            line-height: 1.5;
+            font-size: 14px;
+            background: #f5f5f5;
+        }
+
+        .cv-container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 40px 50px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .print-toolbar {
+            max-width: 900px;
+            margin: 20px auto 0;
+            padding: 0 16px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex-wrap: wrap;
+            gap: 10px 16px;
+        }
+
+        .print-toolbar p {
+            font-size: 13px;
+            color: #555;
+        }
+
+        .print-button {
+            border: 0;
+            border-radius: 6px;
+            padding: 12px 18px;
+            background: #2c3e50;
+            color: #fff;
+            font: inherit;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .print-button:hover {
+            background: #1d2b39;
+        }
+
+        .print-button:focus-visible {
+            outline: 3px solid #287bb5;
+            outline-offset: 3px;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            align-items: flex-start;
+            gap: 28px;
+            text-align: left;
+            border-bottom: 3px solid #2c3e50;
+            padding-bottom: 18px;
+            margin-bottom: 22px;
+        }
+
+        .profile-photo {
+            display: block;
+            width: 120px;
+            height: 140px;
+            flex-shrink: 0;
+            object-fit: cover;
+            object-position: center top;
+            border: 2px solid #2c3e50;
+            border-radius: 6px;
+        }
+
+        .header-info {
+            flex: 1;
+            min-width: 0;
+            overflow-wrap: anywhere;
+        }
+
+        @media screen and (max-width: 600px) {
+            .cv-container {
+                padding: 24px;
+            }
+
+            header {
+                gap: 16px;
+                flex-wrap: wrap;
+            }
+
+            .header-info {
+                flex-basis: 220px;
+            }
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #2c3e50;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+        }
+
+        .title {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .contact-info {
+            font-size: 13px;
+            color: #444;
+        }
+
+        .contact-info a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-info .separator {
+            margin: 0 8px;
+            color: #999;
+        }
+
+        /* Sections */
+        section {
+            margin-bottom: 22px;
+        }
+
+        h2 {
+            font-size: 17px;
+            color: #2c3e50;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 4px;
+            margin-bottom: 12px;
+        }
+
+        h3 {
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 2px;
+        }
+
+        /* Experience / Achievement entries */
+        .entry {
+            margin-bottom: 16px;
+        }
+
+        .entry-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+        }
+
+        .entry-header .role {
+            font-weight: 700;
+            font-size: 15px;
+            color: #333;
+        }
+
+        .entry-header .period {
+            font-size: 13px;
+            color: #666;
+            white-space: nowrap;
+        }
+
+        .entry-sub {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 4px;
+        }
+
+        .entry-sub .company {
+            font-size: 14px;
+            color: #555;
+            font-style: italic;
+        }
+
+        .entry-sub .location {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .entry-link {
+            font-size: 13px;
+            color: #2c3e50;
+            margin-bottom: 4px;
+        }
+
+        .entry-link a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        .entry-link a:hover {
+            text-decoration: underline;
+        }
+
+        .entry-description {
+            font-size: 13.5px;
+            color: #444;
+            margin-bottom: 4px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-top: 4px;
+        }
+
+        li {
+            margin-bottom: 3px;
+            font-size: 13.5px;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0;
+        }
+
+        .skills-category {
+            flex: 1 1 48%;
+            min-width: 280px;
+            margin-bottom: 8px;
+        }
+
+        .skills-category h3 {
+            font-size: 14px;
+            color: #2c3e50;
+            margin-bottom: 3px;
+        }
+
+        .skills-category p {
+            font-size: 13.5px;
+            color: #444;
+        }
+
+        /* Projects grid */
+        .projects-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px 20px;
+        }
+
+        .project-item {
+            flex: 1 1 45%;
+            min-width: 250px;
+            margin-bottom: 6px;
+        }
+
+        .project-item strong {
+            font-size: 13.5px;
+        }
+
+        .project-item a {
+            font-size: 12.5px;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        /* Certifications */
+        .cert-list {
+            columns: 2;
+            column-gap: 30px;
+        }
+
+        .cert-item {
+            break-inside: avoid;
+            margin-bottom: 6px;
+            font-size: 13.5px;
+        }
+
+        .cert-item .cert-name {
+            font-weight: 600;
+        }
+
+        .cert-item .cert-period {
+            font-size: 12.5px;
+            color: #666;
+        }
+
+        /* Languages */
+        .languages-list {
+            display: flex;
+            gap: 30px;
+        }
+
+        .lang-item {
+            font-size: 13.5px;
+        }
+
+        .lang-item strong {
+            color: #333;
+        }
+
+        /* Print styles */
+        @page {
+            size: A4 portrait;
+            margin: 12mm;
+
+            /* Empty margin boxes stop the browser printing its date, title, URL and page number. */
+            @top-center {
+                content: "";
+            }
+
+            @bottom-center {
+                content: "";
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                line-height: 1.3;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .print-toolbar {
+                display: none;
+            }
+
+            .cv-container {
+                box-shadow: none;
+                max-width: none;
+                width: 100%;
+                padding: 0;
+                margin: 0;
+            }
+
+            /* Fit the complete content into two A4 pages without shrinking text. */
+            header {
+                gap: 20px;
+                padding-bottom: 12px;
+                margin-bottom: 14px;
+            }
+
+            .profile-photo {
+                width: 100px;
+                height: 117px;
+            }
+
+            section {
+                margin-bottom: 14px;
+            }
+
+            h2 {
+                margin-bottom: 8px;
+                padding-bottom: 3px;
+            }
+
+            .entry {
+                margin-bottom: 12px;
+            }
+
+            .skills-grid {
+                column-gap: 16px;
+            }
+
+            .skills-category {
+                flex-basis: calc(50% - 8px);
+                margin-bottom: 6px;
+            }
+
+            .projects-list {
+                gap: 4px 20px;
+            }
+
+            .cv-container a,
+            .cv-container a:visited {
+                color: #2c3e50;
+                text-decoration: none;
+            }
+
+            /* .entry is left breakable: a long job entry would otherwise jump whole to page 2 and leave a gap. */
+            header,
+            .skills-grid,
+            .projects-list,
+            .cert-list,
+            .languages-list {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            h2,
+            h3,
+            .entry-header,
+            .entry-sub {
+                break-after: avoid;
+                page-break-after: avoid;
+            }
+
+            li,
+            .skills-category,
+            .project-item,
+            .cert-item {
+                break-inside: avoid;
+                page-break-inside: avoid;
+            }
+
+            p,
+            li {
+                orphans: 3;
+                widows: 3;
+            }
+
+            .skills-category,
+            .project-item {
+                min-width: 0;
+                overflow-wrap: anywhere;
+            }
+
+            .languages-list {
+                flex-wrap: wrap;
+                gap: 8px 24px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="print-toolbar">
+        <p id="print-help">For a two-page CV: choose Save as PDF, A4, default margins, and 100% scale.</p>
+        <button class="print-button" type="button" aria-describedby="print-help" onclick="window.print()">
+            Print / Save as PDF
+        </button>
+    </div>
+    <div class="cv-container">
+
+        <!-- HEADER -->
+        <header>
+            <img class="profile-photo" src="4182d1ef-129e-41c8-a145-03324dbda418.png" alt="Portrait of Zeeshan Tanveer"
+                width="120" height="140">
+            <div class="header-info">
+                <h1>Zeeshan Tanveer</h1>
+                <div class="title">Full-Stack Developer | Laravel, React, WordPress, Shopify &amp; Magento</div>
+                <div class="contact-info">
+                    <a href="mailto:z.tanvir22@gmail.com">z.tanvir22@gmail.com</a>
+                    <span class="separator">|</span>
+                    +92-312-0576200
+                    <span class="separator">|</span>
+                    Lahore, Pakistan (On-site or Remote)
+                    <br>
+                    <a href="https://github.com/zeeshantanveer" target="_blank">github.com/zeeshantanveer</a>
+                    <span class="separator">|</span>
+                    <a href="https://www.linkedin.com/in/zeeshan-tanveer"
+                        target="_blank">linkedin.com/in/zeeshan-tanveer</a>
+                    <br>
+                    Portfolio: <a href="https://zeeshantanveer.github.io/ztanveercv/portfolio/"
+                        target="_blank">zeeshantanveer.github.io/ztanveercv/portfolio</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- PROFESSIONAL SUMMARY -->
+        <section>
+            <h2>Professional Summary</h2>
+            <p>
+                Full-stack developer with 7+ years of web development experience building PHP/Laravel back ends and
+                React front ends, and delivering on CMS and e-commerce platforms: WordPress and WooCommerce plugins
+                published on wordpress.org, Shopify themes and two apps on the Shopify App Store, and Magento.
+                Writes standards-compliant HTML5, CSS3/SCSS and modern JavaScript (ES6+) with responsive (RWD)
+                layouts, semantic content hierarchy for on-page SEO, WCAG accessibility and cross-browser testing,
+                and improves JavaScript performance measured with Lighthouse and Core Web Vitals. Turns Figma and
+                Sketch designs into working features, integrates REST and GraphQL APIs, and builds real-time features
+                with WebSockets. Built and maintained <strong>FreightDesk Online</strong> (30+ carrier APIs, 30,000+
+                shipments a month) and <strong>Haleria</strong> (50,000+ AI conversations a month). Leads a
+                5-member team: mentors engineers, reviews code in depth, triages production issues with support, and
+                delivers multiple client projects on deadline for clients in the U.S. and Europe.
+            </p>
+        </section>
+
+        <!-- TECHNICAL SKILLS -->
+        <section>
+            <h2>Technical Skills</h2>
+            <div class="skills-grid">
+                <div class="skills-category">
+                    <h3>Front-End</h3>
+                    <p>HTML5, CSS3, SCSS, JavaScript (ES6+), React.js, Next.js, jQuery, Responsive Web Design
+                        (RWD), Tailwind CSS, Bootstrap, Web Components</p>
+                </div>
+                <div class="skills-category">
+                    <h3>Back-End &amp; PHP</h3>
+                    <p>PHP, Laravel, Core PHP, Node.js, Express.js, MySQL, PostgreSQL, Redis Queues, Laravel
+                        Horizon</p>
+                </div>
+                <div class="skills-category">
+                    <h3>CMS &amp; E-commerce</h3>
+                    <p>WordPress Plugin Development, WooCommerce, Shopify (Liquid, Online Store 2.0, Theme App
+                        Extensions, Apps), Magento</p>
+                </div>
+                <div class="skills-category">
+                    <h3>APIs &amp; Real-Time</h3>
+                    <p>REST APIs, GraphQL (Shopify Admin API), Webhooks, OAuth, SOAP, WebSockets, Third-Party API
+                        Integration</p>
+                </div>
+                <div class="skills-category">
+                    <h3>Accessibility, SEO &amp; Browser QA</h3>
+                    <p>WCAG Accessibility, Semantic HTML &amp; Content Hierarchy, On-Page SEO, Cross-Browser &amp;
+                        Device Testing</p>
+                </div>
+                <div class="skills-category">
+                    <h3>JavaScript Performance</h3>
+                    <p>Lighthouse, Core Web Vitals, Lazy Loading, Deferred Scripts, Small Bundles, Local &amp; Session
+                        Storage, Caching</p>
+                </div>
+                <div class="skills-category">
+                    <h3>Design &amp; Workflow</h3>
+                    <p>Figma, Sketch, Git &amp; GitHub, Pull Request Reviews, Shopify CLI, Theme Check, Agile
+                        Scrum</p>
+                </div>
+                <div class="skills-category">
+                    <h3>Testing &amp; DevOps</h3>
+                    <p>Jest, PHPUnit, Playwright, Postman, Docker, AWS (EC2, RDS, S3), GitHub Actions CI/CD</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- WORK EXPERIENCE -->
+        <section>
+            <h2>Work Experience</h2>
+
+            <article class="entry">
+                <div class="entry-header">
+                    <span class="role">Software Engineer (Full-Stack, Team Lead)</span>
+                    <span class="period">March 2019 - Present</span>
+                </div>
+                <div class="entry-sub">
+                    <span class="company">AlignPX Technologies</span>
+                    <span class="location">Lahore, Pakistan</span>
+                </div>
+                <ul>
+                    <li>Built and maintained <strong>FreightDesk Online</strong> (<a href="https://freightdesk.online"
+                            target="_blank">freightdesk.online</a>) with PHP/Laravel and Node.js back ends, React front
+                        ends and MySQL, integrating 30+ freight carrier and 6+ parcel APIs and importing orders from 7+
+                        e-commerce platforms including Shopify, WooCommerce and Magento, processing 30,000+
+                        shipments a month.</li>
+                    <li><strong>WordPress and WooCommerce:</strong> developed and maintained shipping plugins
+                        published on <a href="https://wordpress.org/plugins/search/eniture"
+                            target="_blank">wordpress.org</a> in PHP and jQuery, using WordPress and WooCommerce hooks,
+                        settings pages and checkout integration.</li>
+                    <li><strong>Shopify and Magento:</strong> customized Online Store 2.0 themes in Liquid with
+                        custom sections and blocks, built theme app extensions, and published the FreightDesk Online
+                        and Haleria apps on the <a href="https://apps.shopify.com/freightdesk-online-1"
+                            target="_blank">Shopify App Store</a> using the Admin GraphQL and REST APIs. Integrated
+                        Magento with FreightDesk Online as a connected e-commerce platform, syncing store orders into
+                        the shipping workflow.</li>
+                    <li><strong>Front end from design:</strong> turned Figma and Sketch designs into responsive,
+                        standards-compliant pages and React components in HTML5, CSS3/SCSS and ES6+, with semantic
+                        markup and heading hierarchy for on-page SEO, WCAG accessibility, and testing across major
+                        browsers and devices.</li>
+                    <li><strong>JavaScript performance:</strong> deferred and trimmed scripts, kept bundles small,
+                        lazy-loaded images and components, and prevented layout shift, measured with Lighthouse and
+                        Core Web Vitals.</li>
+                    <li><strong>Real-time features:</strong> built the <strong>Haleria</strong> (<a
+                            href="https://haleria.com/" target="_blank">haleria.com</a>) web chat with WebSockets for
+                        live messages and local storage to keep chat state across page loads. Haleria handles 50,000+
+                        AI conversations a month and cut merchant support time by 60%. Also launched the production
+                        AI chatbot on <a href="https://eniture.com" target="_blank">eniture.com</a>.</li>
+                    <li><strong>APIs and data:</strong> built REST APIs in Laravel and Express, consumed REST and
+                        GraphQL APIs, handled webhooks and OAuth, and cut dashboard queries from 4 to 5 seconds to
+                        under 500 ms with indexes and cursor pagination.</li>
+                    <li><strong>Production support:</strong> work with the support team to triage bugs and
+                        troubleshoot production issues, for example a webhook race condition that duplicated
+                        conversations under load, fixed with idempotency keys.</li>
+                    <li><strong>Team lead:</strong> lead a 5-member Agile team across multiple projects, plan
+                        features with stakeholders, mentor engineers, review code in depth through Git pull requests,
+                        and reduced delivery time by 25% while meeting client deadlines.</li>
+                </ul>
+            </article>
+
+            <article class="entry">
+                <div class="entry-header">
+                    <span class="role">Software Engineer</span>
+                    <span class="period">August 2018 - March 2019</span>
+                </div>
+                <div class="entry-sub">
+                    <span class="company">Topdot Software House</span>
+                    <span class="location">Lahore, Pakistan</span>
+                </div>
+                <ul>
+                    <li>Developed and maintained 4+ responsive web applications using HTML5, CSS3, JavaScript,
+                        jQuery, PHP and MySQL, serving 2,000+ daily active users.</li>
+                    <li>Improved performance by 20% through query optimization and caching, and cut average bug
+                        resolution time by 35% through systematic debugging and code review.</li>
+                </ul>
+            </article>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-list">
+                <div class="project-item">
+                    <strong>WordPress Plugins (Eniture)</strong> - PHP, jQuery, WooCommerce<br>
+                    <a href="https://wordpress.org/plugins/search/eniture"
+                        target="_blank">wordpress.org/plugins/search/eniture</a>
+                </div>
+                <div class="project-item">
+                    <strong>FreightDesk Shopify App</strong><br>
+                    <a href="https://apps.shopify.com/freightdesk-online-1"
+                        target="_blank">apps.shopify.com/freightdesk-online-1</a>
+                </div>
+                <div class="project-item">
+                    <strong>FreightDesk Online</strong> - Laravel, React, MySQL<br>
+                    <a href="https://freightdesk.online" target="_blank">freightdesk.online</a>
+                </div>
+                <div class="project-item">
+                    <strong>Haleria</strong> - Real-time AI web chat<br>
+                    <a href="https://haleria.com/" target="_blank">haleria.com</a>
+                </div>
+                <div class="project-item">
+                    <strong>Eniture.com AI Chatbot</strong><br>
+                    <a href="https://eniture.com" target="_blank">eniture.com</a>
+                </div>
+                <div class="project-item">
+                    <strong>HousePilot</strong> - Property platform (Germany)<br>
+                    <a href="https://housepilot.de" target="_blank">housepilot.de</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDUCATION -->
+        <section>
+            <h2>Education</h2>
+            <article class="entry">
+                <div class="entry-header">
+                    <span class="role">BS (Computer Science)</span>
+                    <span class="period">September 2014 - October 2018</span>
+                </div>
+                <div class="entry-sub">
+                    <span class="company">Virtual University of Pakistan</span>
+                    <span class="location">CGPA: 3.32</span>
+                </div>
+            </article>
+        </section>
+
+        <!-- CERTIFICATIONS -->
+        <section>
+            <h2>Certifications</h2>
+            <div class="cert-list">
+                <div class="cert-item">
+                    <span class="cert-name">React: Software Architecture</span>
+                    <span class="cert-period"> - LinkedIn Learning (2021)</span>
+                </div>
+                <div class="cert-item">
+                    <span class="cert-name">AWS Cloud Practitioner Essentials</span>
+                    <span class="cert-period"> - Coursera (2023)</span>
+                </div>
+                <div class="cert-item">
+                    <span class="cert-name">Foundations of Project Management</span>
+                    <span class="cert-period"> - Coursera (2023)</span>
+                </div>
+                <div class="cert-item">
+                    <span class="cert-name">Introduction to Docker</span>
+                    <span class="cert-period"> - Coursera (2020)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- LANGUAGES -->
+        <section>
+            <h2>Languages</h2>
+            <div class="languages-list">
+                <div class="lang-item"><strong>English</strong> - Professional Working Proficiency (written and
+                    spoken)</div>
+                <div class="lang-item"><strong>Urdu</strong> - Native</div>
+            </div>
+        </section>
+
+    </div>
+</body>
+
+</html>

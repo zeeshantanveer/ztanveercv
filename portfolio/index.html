@@ -84,9 +84,9 @@
             --woo: #7f54b3;
             --magento: #e2552d;
             --radius: 14px;
-            --shadow-1: 0 1px 2px rgba(11, 27, 51, .06), 0 2px 6px rgba(11, 27, 51, .05);
-            --shadow-2: 0 2px 4px rgba(11, 27, 51, .05), 0 18px 40px -12px rgba(11, 27, 51, .18);
-            --shadow-3: 0 4px 10px rgba(11, 27, 51, .06), 0 40px 80px -24px rgba(20, 30, 45, .26);
+            --shadow-1: 0 1px 2px rgba(20, 30, 45, .06), 0 2px 6px rgba(20, 30, 45, .05);
+            --shadow-2: 0 2px 4px rgba(20, 30, 45, .05), 0 18px 40px -12px rgba(20, 30, 45, .18);
+            --shadow-3: 0 4px 10px rgba(20, 30, 45, .06), 0 40px 80px -24px rgba(20, 30, 45, .26);
             --ease: cubic-bezier(.16, 1, .3, 1);
             --maxw: 1180px;
         }
@@ -208,7 +208,7 @@
 
         .nav.scrolled {
             border-bottom-color: var(--line);
-            box-shadow: 0 1px 0 rgba(11, 27, 51, .02);
+            box-shadow: 0 1px 0 rgba(20, 30, 45, .02);
         }
 
         .nav-in {
@@ -301,7 +301,7 @@
         }
 
         .btn-ghost {
-            background: #fff;
+            background: rgba(255, 255, 255, .92);
             color: var(--ink);
             border-color: var(--line-2);
         }
@@ -353,10 +353,7 @@
         }
 
         .hero-copy {
-            background: #fff;
-            border-radius: 20px;
-            padding: 40px 40px 36px;
-            box-shadow: var(--shadow-3);
+            padding: 24px 0 8px;
         }
 
         .hero h1 {
@@ -367,8 +364,9 @@
         .lede {
             font-size: 19px;
             line-height: 1.55;
-            color: var(--body);
-            max-width: 46ch;
+            color: var(--ink);
+            font-weight: 500;
+            max-width: 40ch;
             margin-bottom: 28px;
         }
 
@@ -389,14 +387,16 @@
             gap: 10px;
             margin-top: 22px;
             font-size: 14.5px;
-            color: var(--muted);
+            color: var(--ink);
+            font-weight: 500;
         }
 
         .avail i {
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            background: var(--green);
+            background: #0f6b37;
+            box-shadow: 0 0 0 3px rgba(255, 255, 255, .7);
             flex: none;
         }
 
@@ -441,6 +441,7 @@
             background: #e8f6ee;
             border-radius: 999px;
             padding: 4px 10px;
+            white-space: nowrap;
         }
 
         .live i {
@@ -459,6 +460,29 @@
 
         .flow text {
             font-family: "Geist", sans-serif;
+        }
+
+        .flow-v {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            .flow-h {
+                display: none;
+            }
+
+            .flow-v {
+                display: block;
+            }
+
+            .bar-label {
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            .panel-head {
+                flex-wrap: wrap;
+            }
         }
 
         .panel-foot {
@@ -546,7 +570,7 @@
             flex-wrap: wrap;
             gap: 6px;
             list-style: none;
-            margin-bottom: 16px;
+            margin: -4px 0 20px;
         }
 
         .tagline li,
@@ -612,7 +636,6 @@
 
         .perf {
             background: var(--bg-2);
-            border: 1px solid var(--line);
             border-radius: 16px;
             padding: 24px;
         }
@@ -701,16 +724,18 @@
         .stats {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 12px;
-            margin-top: 16px;
+            margin-top: 22px;
             list-style: none;
+            border-top: 1px solid var(--line);
         }
 
         .stats li {
-            background: #fff;
-            border: 1px solid var(--line);
-            border-radius: 14px;
-            padding: 16px;
+            padding: 16px 16px 4px 0;
+        }
+
+        .stats li+li {
+            padding-left: 16px;
+            border-left: 1px solid var(--line);
         }
 
         .stats b {
@@ -763,26 +788,16 @@
 
         .t-haleria {
             grid-column: span 2;
-            grid-row: span 2;
         }
 
         .t-wp {
-            grid-column: span 2;
+            grid-column: span 3;
         }
 
-        .t-haleria .illus {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
 
-        .t-haleria .chat {
-            flex: 1;
-            justify-content: flex-end;
-        }
 
         .t-magento {
-            grid-column: span 2;
+            grid-column: span 3;
         }
 
         .t-eniture {
@@ -810,9 +825,10 @@
         }
 
         .illus {
-            border-radius: 14px;
             background: var(--bg-2);
-            border: 1px solid var(--line);
+            margin: -30px -30px 6px;
+            border-radius: 20px 20px 0 0;
+            border-bottom: 1px solid var(--line);
             position: relative;
             overflow: hidden;
         }
@@ -832,14 +848,15 @@
         .store {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 18px;
-            padding: 22px;
+            gap: 22px;
+            padding: 30px;
+            align-items: center;
         }
 
         .store .img {
             border-radius: 10px;
             background: linear-gradient(135deg, #dfe6ef, #eef2f7);
-            min-height: 170px;
+            min-height: 250px;
         }
 
         .sk {
@@ -872,7 +889,7 @@
             position: relative;
         }
 
-        .appblock em {
+        .appblock>em {
             position: absolute;
             top: -11px;
             left: 10px;
@@ -910,13 +927,46 @@
             flex: 1;
         }
 
+        .store h4 {
+            font-size: 17px;
+            font-weight: 650;
+            color: var(--ink);
+            letter-spacing: -0.01em;
+            margin-bottom: 4px;
+        }
+
+        .store .price {
+            font-family: "Geist Mono", monospace;
+            font-size: 15px;
+            color: var(--ink);
+            margin-bottom: 10px;
+        }
+
+        .rate span {
+            flex: 1;
+            font-size: 13px;
+            color: var(--ink);
+        }
+
+        .rate em {
+            font-style: normal;
+            font-family: "Geist Mono", monospace;
+            font-size: 12.5px;
+            color: var(--body);
+        }
+
+        .setting span {
+            font-size: 13.5px;
+            color: var(--ink);
+        }
+
         /* haleria chat demo */
         .chat {
             display: flex;
             flex-direction: column;
+            justify-content: flex-start;
             gap: 10px;
             padding: 18px 16px 34px;
-            min-height: 330px;
         }
 
         .msg {
@@ -970,14 +1020,17 @@
         .haleria-stats {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 10px;
             list-style: none;
+            border-top: 1px solid var(--line);
         }
 
         .haleria-stats li {
-            border: 1px solid var(--line);
-            border-radius: 12px;
-            padding: 12px;
+            padding: 12px 12px 0 0;
+        }
+
+        .haleria-stats li+li {
+            padding-left: 14px;
+            border-left: 1px solid var(--line);
         }
 
         .haleria-stats b {
@@ -989,7 +1042,9 @@
         }
 
         .haleria-stats span {
-            font-size: 12.5px;
+            display: block;
+            font-size: 13.5px;
+            line-height: 1.35;
             color: var(--muted);
         }
 
@@ -1275,6 +1330,10 @@
             transition: transform .9s var(--ease), opacity .9s var(--ease);
         }
 
+        .reduce .typing {
+            display: none;
+        }
+
         .js .rv.pre {
             transform: translateY(22px);
             opacity: .6;
@@ -1368,7 +1427,11 @@
             }
 
             .hero-copy {
-                padding: 28px 22px 26px;
+                padding: 8px 0 4px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
             }
 
             .lede {
@@ -1488,9 +1551,8 @@
             <div class="wrap hero-grid">
                 <div class="hero-copy">
                     <h1 id="hero-title">I build the systems that connect stores, carriers and customers.</h1>
-                    <p class="lede">Full-stack developer with <strong>7+ years in Laravel and React</strong>, shipping
-                        production work on WordPress, WooCommerce, Shopify and Magento. I lead a 5-member team at
-                        AlignPX Technologies in Lahore.</p>
+                    <p class="lede">Full-stack developer, 7+ years in Laravel and React, shipping on WordPress,
+                        WooCommerce, Shopify and Magento.</p>
                     <div class="ctas">
                         <a class="btn btn-primary" href="#work">View my work
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
@@ -1510,7 +1572,7 @@
                             <strong>FreightDesk Online, order flow</strong>
                             <span class="live"><i aria-hidden="true"></i>Live diagram</span>
                         </div>
-                        <svg class="flow" id="flow" viewBox="0 0 560 360" role="img"
+                        <svg class="flow flow-h" id="flow" viewBox="0 0 560 360" role="img"
                             aria-label="Orders from Shopify, WooCommerce and Magento flow into FreightDesk Online, through a Laravel API, React dashboard, Redis queues and MySQL, then out to 30+ LTL carriers and 6+ parcel providers.">
                             <defs>
                                 <linearGradient id="coreG" x1="0" y1="0" x2="1" y2="1">
@@ -1557,29 +1619,50 @@
                             </g>
                             <g id="packets"></g>
                         </svg>
+                        <svg class="flow flow-v" id="flowv" viewBox="0 0 340 470" role="img"
+                            aria-label="Orders from Shopify, WooCommerce and Magento flow into FreightDesk Online, through a Laravel API, React dashboard, Redis queues and MySQL, then out to 30+ LTL carriers and 6+ parcel providers.">
+                            <g fill="none" stroke="#d3dae4" stroke-width="1.6">
+                                <path id="v1" d="M58 58 C 58 90, 170 80, 170 112" />
+                                <path id="v2" d="M170 58 L 170 112" />
+                                <path id="v3" d="M282 58 C 282 90, 170 80, 170 112" />
+                                <path id="v4" d="M170 338 C 170 370, 88 360, 88 392" />
+                                <path id="v5" d="M170 338 C 170 370, 252 360, 252 392" />
+                            </g>
+                            <g font-size="13" font-weight="600" fill="#0b1b33" text-anchor="middle">
+                                <rect x="6" y="16" width="104" height="42" rx="11" fill="#fff" stroke="#e3e8ef" />
+                                <text x="58" y="41.5">Shopify</text>
+                                <rect x="118" y="16" width="104" height="42" rx="11" fill="#fff" stroke="#e3e8ef" />
+                                <text x="170" y="41.5">WooCommerce</text>
+                                <rect x="230" y="16" width="104" height="42" rx="11" fill="#fff" stroke="#e3e8ef" />
+                                <text x="282" y="41.5">Magento</text>
+                            </g>
+                            <defs><linearGradient id="coreGv" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f6f4ff" /><stop offset="1" stop-color="#eefbfd" /></linearGradient></defs>
+                            <rect x="40" y="112" width="260" height="226" rx="16" fill="url(#coreGv)" stroke="#d6d0fb" />
+                            <text x="170" y="140" text-anchor="middle" font-size="14" font-weight="650" fill="#0b1b33">FreightDesk</text>
+                            <g font-size="13" font-weight="500" fill="#42526b" text-anchor="middle">
+                                <rect x="56" y="156" width="110" height="74" rx="10" fill="#fff" stroke="#e3e8ef" />
+                                <text x="111" y="197.5">Laravel API</text>
+                                <rect x="174" y="156" width="110" height="74" rx="10" fill="#fff" stroke="#e3e8ef" />
+                                <text x="229" y="190">React</text><text x="229" y="207">dashboard</text>
+                                <rect x="56" y="242" width="110" height="74" rx="10" fill="#fff" stroke="#e3e8ef" />
+                                <text x="111" y="283.5">Redis queues</text>
+                                <rect x="174" y="242" width="110" height="74" rx="10" fill="#fff" stroke="#e3e8ef" />
+                                <text x="229" y="283.5">MySQL</text>
+                            </g>
+                            <g font-size="13" font-weight="600" fill="#0b1b33" text-anchor="middle">
+                                <rect x="14" y="392" width="148" height="42" rx="11" fill="#fff" stroke="#e3e8ef" />
+                                <text x="88" y="417.5">30+ LTL carriers</text>
+                                <rect x="178" y="392" width="148" height="42" rx="11" fill="#fff" stroke="#e3e8ef" />
+                                <text x="252" y="417.5">6+ parcel providers</text>
+                            </g>
+                            <g id="packetsv"></g>
+                        </svg>
                         <figcaption class="panel-foot" id="flow-cap">
                             <span>Illustration of the real architecture</span>
                             <span><span class="mono" id="counter">30,000+</span> shipments a month</span>
                         </figcaption>
                     </figure>
                 </div>
-            </div>
-        </section>
-
-        <!-- PLATFORMS -->
-        <section class="strip" aria-label="Platforms">
-            <div class="wrap">
-                <p>Production work shipped on</p>
-                <ul>
-                    <li>Laravel</li>
-                    <li>React</li>
-                    <li>Node.js</li>
-                    <li>WordPress</li>
-                    <li>WooCommerce</li>
-                    <li>Shopify</li>
-                    <li>Magento</li>
-                    <li>MySQL</li>
-                </ul>
             </div>
         </section>
 
@@ -1593,6 +1676,9 @@
 
                 <article class="feature rv" aria-labelledby="fd-title">
                     <div>
+                        <h3 id="fd-title">FreightDesk Online</h3>
+                        <p>A multi-carrier shipping platform. I work in its 5-member team and own the carrier
+                            integration layer, the order-import services and the shipment dashboard.</p>
                         <ul class="tagline" aria-label="Stack">
                             <li>Laravel</li>
                             <li>Node.js</li>
@@ -1601,9 +1687,6 @@
                             <li>Redis</li>
                             <li>Stripe</li>
                         </ul>
-                        <h3 id="fd-title">FreightDesk Online</h3>
-                        <p>A multi-carrier shipping platform. I work in its 5-member team and own the carrier
-                            integration layer, the order-import services and the shipment dashboard.</p>
                         <ul class="checks">
                             <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"
                                     stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -1665,20 +1748,12 @@
                             <div class="store">
                                 <div class="img"></div>
                                 <div>
-                                    <div class="sk h18"></div>
-                                    <div class="sk w40"></div>
-                                    <div class="sk"></div>
-                                    <div class="sk w60"></div>
-                                    <div class="appblock"><em>App block</em>
-                                        <div class="rate"><b class="on"></b>
-                                            <div class="sk"></div>
-                                        </div>
-                                        <div class="rate"><b></b>
-                                            <div class="sk w60"></div>
-                                        </div>
-                                        <div class="rate"><b></b>
-                                            <div class="sk w40"></div>
-                                        </div>
+                                    <h4>Steel Warehouse Shelving</h4>
+                                    <p class="price">$249.00</p>
+                                    <div class="appblock"><em>App block: shipping rates</em>
+                                        <div class="rate"><b class="on"></b><span>LTL freight</span><em>$86.40</em></div>
+                                        <div class="rate"><b></b><span>Parcel</span><em>$24.10</em></div>
+                                        <div class="rate"><b></b><span>Store pickup</span><em>Free</em></div>
                                     </div>
                                 </div>
                             </div>
@@ -1711,7 +1786,6 @@
                                 <div class="msg bot">It shipped this morning. Here is your tracking link.</div>
                                 <div class="msg me">Can I change the delivery address?</div>
                                 <div class="msg bot">I'm handing you to the store team so they can update it.</div>
-                                <div class="msg bot typing" aria-hidden="true"><i></i><i></i><i></i></div>
                             </div>
                             <span class="illus-cap">Demo conversation</span>
                         </div>
@@ -1734,15 +1808,16 @@
                         <div class="illus" aria-hidden="true">
                             <div class="settings">
                                 <div class="setting">
-                                    <div class="sk"></div><span class="toggle on"></span>
+                                    <span>Show live LTL rates at checkout</span><span class="toggle on"></span>
                                 </div>
                                 <div class="setting">
-                                    <div class="sk w60"></div><span class="toggle" id="tg"></span>
+                                    <span>Offer residential delivery</span><span class="toggle" id="tg"></span>
                                 </div>
                                 <div class="setting">
-                                    <div class="sk w40"></div><span class="toggle on"></span>
+                                    <span>Add a handling fee</span><span class="toggle on"></span>
                                 </div>
                             </div>
+                            <span class="illus-cap">Illustration</span>
                         </div>
                         <h3 id="wp-title">WordPress &amp; WooCommerce plugins</h3>
                         <p>Shipping plugins for Eniture, public on wordpress.org, in PHP and jQuery: WordPress and
@@ -1992,12 +2067,12 @@
             }
 
             /* live order flow: packets ride the wires, one clock */
+            if (reduce) document.documentElement.classList.add('reduce');
             var svgNS = 'http://www.w3.org/2000/svg';
-            var g = document.getElementById('packets');
-            var lanes = [
-                { id: 'w1', c: '#2e9e4f', next: [3, 4] }, { id: 'w2', c: '#7f54b3', next: [3, 4] }, { id: 'w3', c: '#e2552d', next: [3, 4] },
-                { id: 'w4', c: '#5a48f5' }, { id: 'w5', c: '#12b5c9' }
-            ].map(function (l) { l.path = document.getElementById(l.id); l.len = l.path.getTotalLength(); return l; });
+            function flow(gid, ids) {
+            var g = document.getElementById(gid);
+            var colors = ['#2e9e4f', '#7f54b3', '#e2552d', '#5a48f5', '#12b5c9'];
+            var lanes = ids.map(function (id, i) { var path = document.getElementById(id); return { path: path, c: colors[i], len: path.getTotalLength() || 1 }; });
             var packets = [];
             function spawn(lane, t0) {
                 var c = document.createElementNS(svgNS, 'circle');
@@ -2029,6 +2104,18 @@
                     if (!document.hidden) requestAnimationFrame(tick); else document.addEventListener('visibilitychange', function v() { document.removeEventListener('visibilitychange', v); last = performance.now(); requestAnimationFrame(tick); });
                 })(last);
             }
+            }
+            var mq = window.matchMedia('(max-width: 600px)');
+            var started = {};
+            function startFlows() {
+                var key = mq.matches ? 'v' : 'h';
+                if (started[key]) return;
+                started[key] = true;
+                if (key === 'v') flow('packetsv', ['v1', 'v2', 'v3', 'v4', 'v5']);
+                else flow('packets', ['w1', 'w2', 'w3', 'w4', 'w5']);
+            }
+            startFlows();
+            if (mq.addEventListener) mq.addEventListener('change', startFlows);
 
             /* haleria demo chat plays when visible */
             var chat = document.getElementById('chat');

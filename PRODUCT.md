@@ -8,7 +8,7 @@ web
 
 ## Stack
 
-Static HTML, CSS and JavaScript with Three.js (WebGL) and GSAP loaded from a CDN. No build step. Hosted on GitHub Pages from the `main` branch of `zeeshantanveer/ztanveercv`; the portfolio lives in `portfolio/` and is served at https://zeeshantanveer.github.io/ztanveercv/portfolio/.
+Static HTML, CSS and JavaScript: a raw WebGL gradient shader (no 3D library) and GSAP loaded from a CDN. No build step. Hosted on GitHub Pages from the `main` branch of `zeeshantanveer/ztanveercv`; the portfolio lives in `portfolio/` and is served at https://zeeshantanveer.github.io/ztanveercv/portfolio/.
 
 ## Users
 

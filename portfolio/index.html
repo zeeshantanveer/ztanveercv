@@ -1626,8 +1626,8 @@
                 });
                 /* label placement per station: [dx, dy, anchor], each clear of every line */
                 var place = {
-                    freightdesk: [1.4, 2.6, 'start'], react: [0, -1.7, 'middle'], redis: [0, 2.6, 'middle'],
-                    carrierhub: [-1.4, -1.7, 'end'], shopify: [0, -1.7, 'middle'], haleriashop: [-1.6, .3, 'end'],
+                    freightdesk: [0, 2.9, 'middle'], react: [0, -1.7, 'middle'], redis: [0, 2.6, 'middle'],
+                    carrierhub: [0, -1.8, 'middle'], shopify: [0, -1.7, 'middle'], haleriashop: [-1.6, .3, 'end'],
                     wordpress: [0, 2.6, 'middle'], magento: [0, 2.6, 'middle'], haleria: [0, -1.7, 'middle'],
                     ws: [0, 2.6, 'middle'], eniture: [0, -1.7, 'middle']
                 };
@@ -1729,12 +1729,16 @@
             scene.add(shade);
 
             const river = new THREE.Shape();
-            river.moveTo(-60, 18);
+            river.moveTo(-160, 18);
+            river.lineTo(-60, 18);
             river.bezierCurveTo(-20, 15, -6, 22, 8, 17);
             river.bezierCurveTo(22, 12, 34, 13, 60, 16);
+            river.lineTo(160, 16);
+            river.lineTo(160, 23);
             river.lineTo(60, 23);
             river.bezierCurveTo(30, 20, 14, 26, 2, 24);
             river.bezierCurveTo(-14, 22, -30, 21, -60, 25);
+            river.lineTo(-160, 25);
             river.closePath();
             const riverMesh = new THREE.Mesh(new THREE.ShapeGeometry(river, 48), new THREE.MeshBasicMaterial({ color: '#cfe2ec', side: THREE.DoubleSide }));
             riverMesh.rotation.x = Math.PI / 2;
@@ -1943,6 +1947,7 @@
             const clock = new THREE.Clock();
             const tmp = new THREE.Vector3(), tan = new THREE.Vector3(), proj = new THREE.Vector3();
             let running = true, ready = false, frameCount = 0;
+            const signs = Array.from(document.querySelectorAll('.sign, .key, .bar'));
             document.addEventListener('visibilitychange', () => {
                 running = !document.hidden;
                 if (running) { clock.getDelta(); requestAnimationFrame(frame); }
@@ -1969,9 +1974,21 @@
                 labels.render(scene, camera);
                 /* hide any label that would be clipped by the viewport edge */
                 if ((frameCount++ & 3) === 0) {
+                    /* and any label that a sign would cut through */
+                    const vh = window.innerHeight;
+                    const signRects = [];
+                    signs.forEach(sg => {
+                        const r = sg.getBoundingClientRect();
+                        if (r.bottom > 0 && r.top < vh) signRects.push(r);
+                    });
                     allLabels.forEach(l => {
                         proj.copy(l.obj.position).project(camera);
-                        l.el.classList.toggle('off', proj.z > 1 || Math.abs(proj.x) > 0.82 || Math.abs(proj.y) > 0.86);
+                        let off = proj.z > 1 || Math.abs(proj.x) > 0.82 || Math.abs(proj.y) > 0.86;
+                        if (!off && signRects.length) {
+                            const b = l.el.getBoundingClientRect();
+                            off = signRects.some(r => b.right > r.left - 6 && b.left < r.right + 6 && b.bottom > r.top - 6 && b.top < r.bottom + 6);
+                        }
+                        l.el.classList.toggle('off', off);
                     });
                 }
                 if (!ready) { ready = true; root.classList.add('gl-ready'); }
